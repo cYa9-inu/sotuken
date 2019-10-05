@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ButtonA_B : MonoBehaviour {
+public class ButtonL_R : MonoBehaviour {
     [SerializeField]
     public GameObject doggy;
 
@@ -11,51 +11,51 @@ public class ButtonA_B : MonoBehaviour {
     public float intervalAction = 0.02f;
 
     //次の押下判定時間
-    float nextTimeA = 0f;
-    float nextTimeB = 0f;
+    float nextTimeL = 0f;
+    float nextTimeR = 0f;
 
     //押下状態
-    public bool pressedA;
-    public bool pressedB;
+    public bool pressedL;
+    public bool pressedR;
 
-	public void OnAbuttonClick()
+	public void OnLbuttonClick()
 	{
-        Debug.Log("Abutton Click");
+        Debug.Log("Lbutton Click");
 
         Vector3 pos = doggy.transform.position;
         pos.x += 0.1f;
         doggy.transform.position = pos;
 	}
 
-    public void OnAbuttonDown()
+    public void OnLbuttonDown()
     {
-        pressedA = true;
-        nextTimeA = Time.realtimeSinceStartup + intervalAction;
+        pressedL = true;
+        nextTimeL = Time.realtimeSinceStartup + intervalAction;
     }
 
-    public void OnAbuttonUp()
+    public void OnLbuttonUp()
     {
-        pressedA = false;
+        pressedL = false;
     }
 
 
     //Bボタン
-    public void OnBbuttonClick()
+    public void OnRbuttonClick()
     {
-        Debug.Log("BbuttonClick");
+        Debug.Log("RbuttonClick");
         Vector3 pos = doggy.transform.position;
         pos.x -= 0.1f;
         doggy.transform.position = pos;
     }
 
-    public void OnBbuttonDown()
+    public void OnRbuttonDown()
     {
-        pressedB = true;
-        nextTimeB = Time.realtimeSinceStartup + intervalAction;
+        pressedR = true;
+        nextTimeR = Time.realtimeSinceStartup + intervalAction;
     }
-    public void OnBbuttonUp()
+    public void OnRbuttonUp()
     {
-        pressedB = false;
+        pressedR = false;
     }
 
 	// Use this for initialization
@@ -65,16 +65,16 @@ public class ButtonA_B : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        if(pressedA && Time.realtimeSinceStartup < nextTimeA)
+        if(pressedL && Time.realtimeSinceStartup < nextTimeL)
         {
-            nextTimeA = Time.realtimeSinceStartup + intervalAction;
-            OnAbuttonClick();
+            nextTimeL = Time.realtimeSinceStartup + intervalAction;
+            OnLbuttonClick();
         }
 		
-        if (pressedB && Time.realtimeSinceStartup < nextTimeB)
+        if (pressedR && Time.realtimeSinceStartup < nextTimeR)
         {
-            nextTimeB = Time.realtimeSinceStartup + intervalAction;
-            OnBbuttonClick();
+            nextTimeR = Time.realtimeSinceStartup + intervalAction;
+            OnRbuttonClick();
         }
 	}
 }
