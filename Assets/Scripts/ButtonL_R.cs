@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class ButtonL_R : MonoBehaviour {
     [SerializeField]
-    public GameObject doggy;
+    public GameObject player;
 
     //押しっぱなし判定の間隔
     public float intervalAction = 0.02f;
@@ -15,18 +15,24 @@ public class ButtonL_R : MonoBehaviour {
     float nextTimeF = 0f;
     float nextTimeBk = 0f;
 
+    float nextTimeRR = 0f;
+    float nextTimeRL = 0f;
+
     //押下状態
     public bool pressedL;
     public bool pressedR;
     public bool pressedF;
     public bool pressedBk;
 
+    public bool pressedRR;
+    public bool pressedRL;
+
     //前進ボタン
     public void OnFbuttonClick()
     {
         Debug.Log("Fbutton Click");
 
-        Transform tf = doggy.transform;
+        Transform tf = player.transform;
         tf.Translate(Vector3.forward * 0.1f);
 
     }
@@ -49,7 +55,7 @@ public class ButtonL_R : MonoBehaviour {
 	{
         Debug.Log("Lbutton Click");
 
-        Transform tf = doggy.transform;
+        Transform tf = player.transform;
         tf.Translate(Vector3.left*0.1f);
         
 	}
@@ -70,7 +76,7 @@ public class ButtonL_R : MonoBehaviour {
     public void OnRbuttonClick()
     {
         Debug.Log("RbuttonClick");
-        Transform tf = doggy.transform;
+        Transform tf = player.transform;
         tf.Translate(Vector3.right * 0.1f);
     }
 
@@ -88,7 +94,7 @@ public class ButtonL_R : MonoBehaviour {
     public void OnBkbuttonClick()
     {
         Debug.Log("BkbuttonClick");
-        Transform tf = doggy.transform;
+        Transform tf = player.transform;
         tf.Translate(Vector3.back * 0.1f);
     }
 
@@ -102,6 +108,44 @@ public class ButtonL_R : MonoBehaviour {
         pressedBk = false;
     }
 
+    public void OnRRbuttonClick()
+    {
+        Debug.Log("RRbuttonClick");
+        Transform tf = player.transform;
+        tf.Rotate(new Vector3 (0,1,0));
+
+    }
+
+    public void OnRRbuttonDown()
+    {
+        pressedRR = true;
+        nextTimeRR = Time.realtimeSinceStartup + intervalAction;
+    }
+
+    public void OnRRbuttonUp()
+    {
+        pressedRR = false;
+    }
+
+
+    public void OnRLbuttonClick()
+    {
+        Debug.Log("RLbuttonClick");
+        Transform tf = player.transform;
+        tf.Rotate(new Vector3(0, -1, 0));
+
+    }
+
+    public void OnRLbuttonDown()
+    {
+        pressedRL = true;
+        nextTimeRL = Time.realtimeSinceStartup + intervalAction;
+    }
+
+    public void OnRLbuttonUp()
+    {
+        pressedRL = false;
+    }
 
 
     // Use this for initialization
@@ -134,5 +178,17 @@ public class ButtonL_R : MonoBehaviour {
             nextTimeBk = Time.realtimeSinceStartup + intervalAction;
             OnBkbuttonClick();
         }
+        if (pressedRR && Time.realtimeSinceStartup < nextTimeRR)
+        {
+            nextTimeRR = Time.realtimeSinceStartup + intervalAction;
+            OnRRbuttonClick();
+        }
+        if (pressedRL && Time.realtimeSinceStartup < nextTimeRL)
+        {
+            nextTimeRL = Time.realtimeSinceStartup + intervalAction;
+            OnRLbuttonClick();
+        }
+
+
     }
 }
