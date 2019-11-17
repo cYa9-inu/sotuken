@@ -27,6 +27,12 @@ public class ButtonL_R : MonoBehaviour {
     public bool pressedRR;
     public bool pressedRL;
 
+    //ボタンのアタッチ
+    public void setPlayer(GameObject player)
+    {
+        this.player = player;
+    }
+
     //前進ボタン
     public void OnFbuttonClick()
     {
