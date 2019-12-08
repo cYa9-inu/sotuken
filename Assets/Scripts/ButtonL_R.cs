@@ -5,6 +5,7 @@ using UnityEngine;
 public class ButtonL_R : MonoBehaviour {
     [SerializeField]
     public GameObject player;
+    private Bodybehaviour pBodybehaviour;
 
     //押しっぱなし判定の間隔
     public float intervalAction = 0.02f;
@@ -31,6 +32,7 @@ public class ButtonL_R : MonoBehaviour {
     public void setPlayer(GameObject player)
     {
         this.player = player;
+        pBodybehaviour = GetComponent<Bodybehaviour>();
     }
 
     //前進ボタン
@@ -151,6 +153,12 @@ public class ButtonL_R : MonoBehaviour {
     public void OnRLbuttonUp()
     {
         pressedRL = false;
+    }
+
+    public void OnAbuttonDown()
+    {
+        pBodybehaviour.AttackTrigger();
+        
     }
 
 

@@ -21,6 +21,7 @@ GameObject:
   - component: {fileID: 4739010872653972}
   - component: {fileID: 54071968702567826}
   - component: {fileID: 95700248883787252}
+  - component: {fileID: 114959131993864612}
   m_Layer: 0
   m_Name: Doggy
   m_TagString: Untagged
@@ -595,7 +596,7 @@ Animator:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1461941740434774}
-  m_Enabled: 0
+  m_Enabled: 1
   m_Avatar: {fileID: 0}
   m_Controller: {fileID: 9100000, guid: f4d70016afef94d06864349fd1fb9542, type: 2}
   m_CullingMode: 0
@@ -606,3 +607,14 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &114959131993864612
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1461941740434774}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0b6822de5846d4f87b7d6a378925baa4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
