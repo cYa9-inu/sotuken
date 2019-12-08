@@ -20,7 +20,6 @@ GameObject:
   m_Component:
   - component: {fileID: 4739010872653972}
   - component: {fileID: 54071968702567826}
-  - component: {fileID: 95700248883787252}
   - component: {fileID: 114959131993864612}
   m_Layer: 0
   m_Name: Doggy
@@ -90,6 +89,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4663863884725864}
+  - component: {fileID: 95210049275766090}
   m_Layer: 0
   m_Name: inu2
   m_TagString: Untagged
@@ -589,13 +589,13 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.0071226778, y: 0.006189985, z: 0.0071226787}
   m_Center: {x: -0.012663934, y: 0, z: 0.012976983}
---- !u!95 &95700248883787252
+--- !u!95 &95210049275766090
 Animator:
   serializedVersion: 3
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1461941740434774}
+  m_GameObject: {fileID: 1731572690696416}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
   m_Controller: {fileID: 9100000, guid: f4d70016afef94d06864349fd1fb9542, type: 2}

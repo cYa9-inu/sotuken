@@ -32,7 +32,7 @@ public class ButtonL_R : MonoBehaviour {
     public void setPlayer(GameObject player)
     {
         this.player = player;
-        pBodybehaviour = GetComponent<Bodybehaviour>();
+        pBodybehaviour = player.GetComponent<Bodybehaviour>();
     }
 
     //前進ボタン

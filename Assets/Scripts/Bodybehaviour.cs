@@ -17,7 +17,7 @@ public class Bodybehaviour : MonoBehaviour {
 
     // Use this for initialization
     void Start () {
-        animator = GetComponent<Animator>();
+        animator = transform.GetChild(0).gameObject.GetComponent<Animator>();
         isAttackHash = Animator.StringToHash("Base Layer.Attack");
 	}
 	
