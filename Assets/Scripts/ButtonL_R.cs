@@ -38,7 +38,7 @@ public class ButtonL_R : MonoBehaviour {
     //前進ボタン
     public void OnFbuttonClick()
     {
-        Debug.Log("Fbutton Click");
+        //Debug.Log("Fbutton Click");
 
         Transform tf = player.transform;
         tf.Translate(Vector3.forward * 0.1f);
@@ -61,7 +61,7 @@ public class ButtonL_R : MonoBehaviour {
     //Lボタン
     public void OnLbuttonClick()
 	{
-        Debug.Log("Lbutton Click");
+        //Debug.Log("Lbutton Click");
 
         Transform tf = player.transform;
         tf.Translate(Vector3.left*0.1f);
@@ -83,7 +83,7 @@ public class ButtonL_R : MonoBehaviour {
     //Rボタン
     public void OnRbuttonClick()
     {
-        Debug.Log("RbuttonClick");
+        //Debug.Log("RbuttonClick");
         Transform tf = player.transform;
         tf.Translate(Vector3.right * 0.1f);
     }
@@ -101,7 +101,7 @@ public class ButtonL_R : MonoBehaviour {
     //後進ボタン
     public void OnBkbuttonClick()
     {
-        Debug.Log("BkbuttonClick");
+        //Debug.Log("BkbuttonClick");
         Transform tf = player.transform;
         tf.Translate(Vector3.back * 0.1f);
     }
@@ -118,7 +118,7 @@ public class ButtonL_R : MonoBehaviour {
 
     public void OnRRbuttonClick()
     {
-        Debug.Log("RRbuttonClick");
+       //Debug.Log("RRbuttonClick");
         Transform tf = player.transform;
         tf.Rotate(new Vector3 (0,1,0));
 
@@ -138,7 +138,7 @@ public class ButtonL_R : MonoBehaviour {
 
     public void OnRLbuttonClick()
     {
-        Debug.Log("RLbuttonClick");
+        //Debug.Log("RLbuttonClick");
         Transform tf = player.transform;
         tf.Rotate(new Vector3(0, -1, 0));
 
