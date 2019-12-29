@@ -6,13 +6,18 @@ using UnityEngine.UI;
 
 public class MenuBotton : MonoBehaviour {
 
-	// Use this for initialization
+	// Startbutton
 	public void StartGameButtonClicked () {
         SceneManager.LoadScene("SampleScene");
 	}
 
-    // Update is called once per frame
+    //Customize Botton
     public void CustomizeClicked() {
         SceneManager.LoadScene("SampleScene");
+    }
+
+    public void GotoMenuClicked()
+    {
+        SceneManager.LoadScene("Menu");
     }
 }
