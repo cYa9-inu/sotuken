@@ -157,7 +157,7 @@ public class ButtonL_R : MonoBehaviour {
 
     public void OnAbuttonDown()
     {
-        pBodybehaviour.AttackTrigger();
+        pBodybehaviour.AttackTrigger(true);
         
     }
 
