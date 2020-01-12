@@ -34,7 +34,7 @@ public class Pop : MonoBehaviour {
         p2body.tag = "P2";
         //プレイヤー設定
         ButtonL_R script = GetComponent<ButtonL_R>();
-        script.setPlayer(p1body);
+        script.setPlayer(p1body, p2body);
 
 
     }
