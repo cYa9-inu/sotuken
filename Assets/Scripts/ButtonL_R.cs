@@ -31,10 +31,10 @@ public class ButtonL_R : MonoBehaviour {
     //ボタンのアタッチ
     public void setPlayer(GameObject player1,GameObject player2)
     {
-        this.p1player = p1player;
+        this.p1player = player1;
         p1pBodybehaviour = p1player.GetComponent<Bodybehaviour>();
 
-        this.p2player = p2player;
+        this.p2player = player2;
         p2Bodybehaviour = p2player.GetComponent<Bodybehaviour>();
 
     }
