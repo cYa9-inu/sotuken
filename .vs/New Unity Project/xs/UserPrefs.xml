@@ -2,11 +2,11 @@
   <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="Unity.Editor" />
   <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/Pop.cs">
     <Files>
-      <File FileName="Assets/Scripts/ButtonL_R.cs" Line="166" Column="43" />
+      <File FileName="Assets/Scripts/ButtonL_R.cs" Line="39" Column="9" />
       <File FileName="Assets/Scripts/Pop.cs" Line="33" Column="100" />
-      <File FileName="Assets/Scripts/Bodybehaviour.cs" Line="38" Column="13" />
+      <File FileName="Assets/Scripts/Bodybehaviour.cs" Line="38" Column="6" />
       <File FileName="Assets/Scripts/GameM.cs" Line="35" Column="34" />
-      <File FileName="Assets/Scripts/MenuBotton.cs" Line="18" Column="5" />
+      <File FileName="Assets/Scripts/MenuBotton.cs" Line="18" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
